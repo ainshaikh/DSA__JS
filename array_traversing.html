@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Array traversing</title>
+
+    <script>
+        let data = [43,63,5,35,65,8,9,42,45,77674];
+        // for(let i=0; i<data.length; i++){
+        //     document.write(`Array ${i} is ${data[i]}<br>`);
+        // }
+
+        // let x = 5;
+        // document.write(data[x]);
+
+        function getElement(){
+            let el = document.getElementById('element').value;
+            if(el<data.length && typeof parseInt(el) === 'number'){
+            alert(data[el]);
+            }
+            else{
+                alert('Please type correct input');
+            }
+        }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="element" />
+    <button onclick="getElement()">Get Element</button>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Inserting element in an Array</title>
+    <script>
+        // let data = [2,3,4,5,6,7,8,9];
+        // let newData = 200;
+        // let index = 3;
+        // console.warn(data)
+
+        // for(let i = data.length-1; i>=0; i--){
+        //     // console.warn(data[i]);
+        //     if(i>=index){
+        //         data[i+1] = data[i];
+        //         if(i=index){
+        //             data[i] = newData;
+        //         }
+                
+        //     }
+        // }
+        // console.warn(data)
+        function getElement(){
+        let data = [2,3,4,5,6,7,8,9];
+        let newData = document.getElementById('newElement').value;
+        let index = document.getElementById('index').value;
+        console.warn(data)
+
+        for(let i = data.length-1; i>=0; i--){
+            // console.warn(data[i]);
+            if(i>=index){
+                data[i+1] = data[i];
+                if(i=index){
+                    data[i] = newData;
+                }
+                
+            }
+        }
+        console.warn(data)
+        }
+    </script>
+  </head>
+  <body>
+    <input type = 'text' id = 'index' placeholder="Insert index" />
+    <input type="text" id="newElement" placeholder="Insert new element" />
+    <button onclick="getElement()">Insert Element</button>
+  </body>
+</html>
