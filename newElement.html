@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding new Element</title>
+</head>
+<body>
+    <script>
+       let data = [1,2,3,4,6,7,8,9,10];
+       let position = 4;
+       let newElement = 5;
+
+       for(let i=data.length; i>=0; i--){
+        if(i>= position){
+            data[i+1] = data[i];
+            if(i == position){
+                data[i]=newElement;
+            }
+        }
+       }
+       document.write(data);
+    </script>
+</body>
+</html>
