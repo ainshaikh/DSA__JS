@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete element</title>
+</head>
+<body>
+    <script>
+        // let data = [23,33,32,12,65]
+        // let position = 2;
+        // for(let i=position; i<data.length-1; i++){
+        //     data[i] = data[i+1];
+
+        // }
+        // data.length = data.length-1;
+        // document.write(data);
+
+        function removeElement(){
+            let data = [23,33,32,12,65]
+        let position = document.getElementById('number').value
+        position = parseInt(position)
+        for(let i=position; i<data.length-1; i++){
+            data[i] = data[i+1];
+
+        }
+        data.length = data.length-1;
+        console.log(data)
+        }
+    </script>
+
+    <input type="text" id="number" placeholder="Enter element to remove">
+    <button onclick="removeElement()">Remove Element</button>
+
+</body>
+</html>

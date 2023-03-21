@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search element</title>
+  </head>
+  <body>
+    <script>
+      // let data = [1,2,3,4,5,6,7,8,9,10]
+      // let item = 4;
+      // for(let i=0; i<data.length; i++){
+      //     if(data[i] === item){
+      //         index = i;
+      //         break;
+      //     }
+      // }
+      // console.log(index);
+
+      function searchEle() {
+        let data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        
+        let item = document.getElementById('index').value;
+        let index = undefined;
+        for (let i = 0; i < data.length; i++) {
+          if (data[i] == item) {
+            index = i;
+            break;
+          }
+        }
+        console.log(index);
+      }
+    </script>
+    <input type="text" id="index" placeholder="Search Index">
+    <button onclick="searchEle()">Search Element</button>
+  </body>
+</html>
